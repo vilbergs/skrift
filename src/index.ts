@@ -1,11 +1,11 @@
-/**
- * This file is just a silly example to show everything working in the browser.
- * When you're ready to start on your site, clear the file. Happy hacking!
- **/
+import { create } from './test'
 
-import confetti from 'canvas-confetti';
+const skrift = create(document.getElementById('editor') as HTMLElement)
 
-confetti.create(document.getElementById('canvas') as HTMLCanvasElement, {
-  resize: true,
-  useWorker: true,
-})({ particleCount: 200, spread: 200 });
+skrift.input((content) => {
+    const app = document.getElementById('app')
+
+   if (app) {
+    app.innerHTML = content
+   }
+})
