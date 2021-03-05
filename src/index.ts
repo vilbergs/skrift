@@ -1,11 +1,11 @@
 import { create } from './test'
 
-const skrift = create(document.getElementById('editor') as HTMLElement)
-
-skrift.input((content) => {
-    const app = document.getElementById('app')
-
-   if (app) {
-    app.innerHTML = content
-   }
+create(document.getElementById('editor') as HTMLElement).then((editor) => {
+  editor.input((content) => {
+    if (app) {
+      app.innerHTML = content
+    }
+  })
 })
+
+const app = document.getElementById('app')

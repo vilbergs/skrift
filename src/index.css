@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 #img {
   display: block;
   margin: auto;
@@ -11,4 +15,8 @@
   margin: 2rem auto;
   width: 540px;
   height: 540px;
+}
+
+.skrift_editor {
+  @apply bg-blue-500 w-52 h-52 rounded-xl;
 }
